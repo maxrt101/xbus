@@ -1,0 +1,9 @@
+#ifndef _XBUS_VERSION_H_
+#define _XBUS_VERSION_H_ 1
+
+#define XBUS_VERSION "0.1.0"
+#define XBUS_VERSION_MAJOR 0
+#define XBUS_VERSION_MINOR 1
+#define XBUS_VERSION_PATCH 0
+
+#endif /* _XBUS_VERSION_H_ */

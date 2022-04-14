@@ -1,0 +1,18 @@
+
+# C/C++ Object compiled files
+*.o
+*.a
+*.so
+*.out
+
+# Editors
+.vscode/
+*.sw*
+.sw*
+
+# Mac OS
+.DS_Store
+
+# Project Specific
+build/
+mrt/
