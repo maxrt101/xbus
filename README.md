@@ -108,7 +108,18 @@ Options:
   -l LVL, --loglevel LVL - Sets log level (debug, info, warning, error, fatal)
 If COMMAND is empty - REPL will run
 To call/notify global property, put '-' instead of OBJECT
+```
 
+Examples:
+```
+xbus list
+xbus call test status 1
+xbus request test status
+xbus call - fd
+xbus notify test testNotification
+xbus send test+status?
+xbus parse_res status $(xbus call test status)
+xbus parse_req subject $(xbus listen)
 ```
 
 ### 3. `libxbus`
