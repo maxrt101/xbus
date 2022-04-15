@@ -157,19 +157,22 @@ tag        : '#' [0-9]+
 Exaples:  
 ```
 +register:test
+!notify
 test+status?
 test+wait:4
+test-value?#5
+test+schedule:0&#3
 ```
 
 #### Responses
 ```
-format   : status [rest]
+format     : status [rest] [tag]
 
-string   : [^,]+
-status   : string
-rest     : , rest
-         | string
-
+string     : [^,]+
+status     : string
+rest       : , rest
+           | string
+tag        : '#' [0-9]+
 ```
 
 Exaples:
@@ -177,6 +180,7 @@ Exaples:
 OK
 OK,WAIT,3
 ERR,ARGUMENT MISMATCH
+ERR,NO SUCH OBJECT#3
 ```
 
 ## libxbus reference
