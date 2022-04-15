@@ -146,8 +146,8 @@ subject    : identifier
 action     : '-'
            | '+'
            | '!'
-args       : ':' arg [, arg ...]
-           | '=' arg [, arg ...]
+args       : ':' arg [',' arg ...]
+           | '=' arg [',' arg ...]
 arg        : [^\-+?&#]+
 async      : '&'
 request    : '?'
@@ -170,7 +170,7 @@ format     : status [rest] [tag]
 
 string     : [^,]+
 status     : string
-rest       : , rest
+rest       : ',' rest
            | string
 tag        : '#' [0-9]+
 ```
