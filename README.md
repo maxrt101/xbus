@@ -1,5 +1,13 @@
-# xbus
+```
+██╗  ██╗██████╗ ██╗   ██╗███████╗
+╚██╗██╔╝██╔══██╗██║   ██║██╔════╝
+ ╚███╔╝ ██████╔╝██║   ██║███████╗
+ ██╔██╗ ██╔══██╗██║   ██║╚════██║
+██╔╝ ██╗██████╔╝╚██████╔╝███████║
+╚═╝  ╚═╝╚═════╝  ╚═════╝ ╚══════╝
+```
 
+## About
 Bus architecture for unix-like systems.  
 Implements IPC and RPCs.  
 Insired by OpenWrt's ubus.  
@@ -107,14 +115,13 @@ To call/notify global property, put '-' instead of OBJECT
 Provides interface for xbus from C++ code. Example can be found above, reference - below
 
 ### 4. `xbus` message protocol
-Text based protocol built on top of unix domain sockets, but can be used over virtually any protocol stack. Request and reponse defitions are provided using ebnf-like grammar.
+Text based protocol built on top of unix domain sockets, but can be used over virtually any protocol stack. Request and reponse definions are provided using ebnf-like grammar.
 
 ```
 Legend:
 [X]      - optional
 X ...    - X followed by more X
 [X ...]  - zero or more X
-(X)      - group
 ```
 
 #### Requests
@@ -146,6 +153,7 @@ test+wait:4
 #### Responses
 ```
 format   : status [rest]
+
 string   : [^,]+
 status   : string
 rest     : , rest
